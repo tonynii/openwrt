@@ -29,6 +29,9 @@ ipq40xx_setup_interfaces()
 	zyxel,wre6606)
 		ucidef_set_interface_lan "eth0"
 		;;
+	netgear,ex6200v2)
+		ucidef_set_interface_lan "eth0"
+		;;
 	aruba,ap-303h)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
