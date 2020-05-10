@@ -183,6 +183,10 @@ case "$FIRMWARE" in
 		ath10kcal_extract "ART" 4096 12064
 		ath10kcal_patch_mac_crc $(mtd_get_mac_binary dnidata 0)
 		;;
+	netgear,ex6200v2)
+		caldata_extract "ART" 4096 12064
+		ath10k_patch_mac $(mtd_get_mac_binary dnidata 0)
+		;;
 	zyxel,nbg6617 |\
 	zyxel,wre6606)
 		ath10kcal_extract "ART" 4096 12064
@@ -242,6 +246,10 @@ case "$FIRMWARE" in
 		;;
 	netgear,ex6100v2 |\
 	netgear,ex6150v2)
+		ath10kcal_extract "ART" 20480 12064
+		ath10kcal_patch_mac_crc $(mtd_get_mac_binary dnidata 12)
+		;;
+	netgear,ex6200v2)
 		ath10kcal_extract "ART" 20480 12064
 		ath10kcal_patch_mac_crc $(mtd_get_mac_binary dnidata 12)
 		;;
